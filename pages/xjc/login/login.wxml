@@ -1,0 +1,7 @@
+<scroll-view class="login">
+<image src="../../../image/login.png" class = "login_logo"></image>
+    <input class="phonenumberInput" type="number" maxlength="11" placeholder="请输入手机号" bindinput="phonenumerInput" focus/>
+    <input class="passwordInput" type="password" maxlength="16" placeholder="请输入密码" bindinput="passwordInput"/>
+    <button class="loginButton" bindtap="loginButtonClick">登录</button>
+    <button class="registButton" bindtap="registButtonClick">注册</button>
+</scroll-view>

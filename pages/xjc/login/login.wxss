@@ -1,0 +1,72 @@
+/* pages/login/login.wxss */
+.login{
+    padding-top: calc((100% - 500rpx)/2);
+}
+.phonenumberInput,.passwordInput,.repasswordInput{
+    width: 90%;
+    border: 1px solid #ccc;
+    margin: 0 auto 40rpx;
+    border-radius: 15rpx;
+    font-size: 28rpx;
+    padding:0 10rpx;
+    box-sizing: border-box;
+    height: 70rpx;
+}
+.loginButton,.registButton{
+    width: 90%;
+    border-radius: 50rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    box-shadow: 0 1px 5px #dcdbd7;
+}
+.loginButton,.regist .registButton{
+    background: #ffd000;
+    margin-bottom: 40rpx;
+    color: #fff;
+}
+.regist .registButton{
+    margin-bottom: 200rpx;
+}
+.registButton{
+    background: #fff;
+    border: 1px solid #ffd000;
+    color: #ffd000;
+    margin-bottom: 200rpx;
+}
+.test-code{
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto 40rpx;
+}
+.smscodeInput,.smscodeButton{
+    float: left;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    height: 70rpx;
+    line-height: 70rpx;
+}
+.smscodeInput{
+    width: 60%;
+    border-radius: 15rpx 0 0 15rpx;
+    border-right: none;
+    font-size: 28rpx;
+}
+.smscodeButton{
+    width: 40%;
+    border-radius: 0 15rpx 15rpx 0;
+    background: #ffd000;
+    font-size: 24rpx;
+    color: #fff;
+    border-left: none;
+}
+.regist{
+    padding-top: calc((100% - 500rpx)/2);
+}
+
+.login_logo{
+    margin: 0 auto 100rpx ;
+    width: 600rpx ;
+    height: 385rpx ;
+    display: block;
+}

@@ -1,0 +1,14 @@
+/* pages/memberright/index.wxss */
+.page{
+    padding: 40rpx 30rpx;
+}
+.red{
+    color: #f00;
+    font-size: 30rpx;
+    margin-bottom: 14rpx;
+}
+.desc{
+    color: #333;
+    margin-bottom: 30rpx;
+    line-height: 48rpx;
+}

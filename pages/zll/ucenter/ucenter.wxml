@@ -1,0 +1,8 @@
+<!--pages/ucenter/index.wxml-->
+<view class="btn-area">
+  <view class="member-center" bindtap="goApp">发布信息</view>
+  <navigator url="../../lds/confirm/confirm" class="member-center">服务方认证</navigator>
+  <navigator url="../member/member" class="member-center">会员中心</navigator>
+  <navigator url="../star/star" class="star-level">星级认证</navigator>
+  <navigator url="../setting/setting" class="set-up">设置</navigator>
+</view>

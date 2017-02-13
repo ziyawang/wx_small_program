@@ -1,0 +1,130 @@
+
+<!-- 新建任务 -->
+<form bindsubmit="formSubmit">
+  <view class="mod-a">
+    <view class="mod oh">
+      <text class="company-name">企业名称:</text>
+      <input name="ServiceName" class="txt" maxlength="100" value="{{lists.ServiceName}}" />
+    </view>
+  </view>
+  <view class="section" wx:if="{{role==2}}">
+    <view class="section_title">企业所在地：</view>
+    <view class="area-com">
+      <picker bindchange="bindProvinceChange" value="{{provinceArray[provinceIndex]}}" range="{{provinceArray}}" name="province">
+        <view class="picker">
+          省份:{{provinceArray[provinceIndex]}}
+        </view>
+      </picker>
+      <picker bindchange="bindCityChange" value="{{cityArray[cityIndex]}}" range="{{cityArray}}" name="city">
+        <view class="picker city">
+          城市:{{cityArray[cityIndex]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="section" wx:else>
+    <view class="section_title mt10">企业所在地：</view>
+    <input name="ServiceLocation" class="input" maxlength="100" value="{{lists.ServiceLocation}}" />
+  </view>
+  <view class="mod-a">
+    <view class="mod t-name">
+      <text class="key">企业规模(人):</text>
+      <input name="Size" class="input" maxlength="100" value="{{lists.Size}}" />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod t-name">
+      <text class="key">注册资金(万):</text>
+      <input name="Founds" class="input" maxlength="100" value="{{lists.Founds}}" />
+    </view>
+  </view>
+  <view class="section" wx:if="{{role==2}}">
+
+    <!--<view class="section__title">注册日期</view>-->
+    <picker class="build-date" mode="date" value="{{date}}" start="1990-10-01" end="2050-09-01" bindchange="bindDateChange" name="RegTime">
+      <view class="picker">
+        成立时间：{{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="section" wx:else>
+
+    <!--<view class="section__title">注册日期</view>-->
+    <text class="key">成立时间：</text>
+    <text name="RegTime" class="input" maxlength="100" value="">{{lists.RegTime}}</text>
+  </view>
+  <view class="mod-a">
+    <view class="mod t-name">
+      <text class="key">联系人姓名:</text>
+      <input name="ConnectPerson" class="input" maxlength="100" value="{{lists.ConnectPerson}}" />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod t-name">
+      <text class="key">联系人电话:</text>
+      <input name="ConnectPhone" class="input" maxlength="100" value="{{lists.ConnectPhone}}" />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod">
+      <text class="key company-desc">企业简介:</text>
+      <textarea class="company-desc-txt" name="ServiceIntroduction" bindblur="bindTextAreaBlur" value="{{lists.ServiceIntroduction}}" auto-height />
+    </view>
+  </view>
+  <view class="mod-a" wx:if="{{role==2}}">
+    <view class="mod">
+      <text>服务地区:</text>
+      <checkbox-group class="check-group" bindchange="checkboxChangeArea" name="ServiceArea">
+        <label class="checkbox" wx:for="{{areas}}">
+          <view wx:if="{{item.name=='全国'}}">
+            <checkbox class="i-check" value="{{item.name}}" />{{item.value}}
+          </view>
+          <view wx:else>
+            <checkbox class="i-check" value="{{item.name}}" checked="{{checked}}" />{{item.value}}
+          </view>
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class="mod-a" wx:else>
+    <text>服务地区:</text>
+    <text name="ServiceArea" class="input" maxlength="100" value="">{{lists.ServiceArea}}</text>
+  </view>
+  <view class="mod-a" wx:if="{{role==2}}">
+    <view class="mod">
+      <text>服务类型:</text>
+      <checkbox-group bindchange="checkboxChange" name="ServiceType" class="check-group">
+        <label class="checkbox-type" wx:for="{{items}}">
+          <checkbox value="{{item.name}}" class="i-check" checked="{{item.checked}}" />{{item.value}}
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class="mod-a" wx:else>
+    <text>服务类型:</text>
+    <text name="ServiceType" class="input" maxlength="100" value="">{{lists.ServiceType}}</text>
+  </view>
+  <view class="mod-a last-mod-a" wx:if="{{role==2}}">
+    <view class="mod">
+      <text>上传相关凭证:</text>
+      <text bindtap="bindChooseImage">选择图片</text>
+      <view class="oh">
+        <view wx:for="{{tempFilePaths}}" class="img-box">
+          <image src="{{item}}" bindlongtap="delete" class="cert-img"></image>
+          <view bindtap="deleteImg" class="delete-img">×</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="mod-a" wx:else>
+    <text>上传相关凭证:</text>
+    <view class="oh">
+      <view class="img-box">
+        <image src="http://images.ziyawang.com/{{lists.ConfirmationP1}}" class="cert-img" bindlongtap="delete" name="ConfirmationP1"></image>
+      </view>
+    </view>
+  </view>
+  <view class="create" wx:if="{{role==2}}">
+    <button formType="submit" class="sub-btn">重新提交</button>
+  </view>
+</form>

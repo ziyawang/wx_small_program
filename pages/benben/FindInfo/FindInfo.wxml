@@ -1,0 +1,72 @@
+<view class="container">
+  <view class="nav" hidden="{{myhidden}}" >
+    <view class="topnav">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">类型：{{array[index]}}
+          <image class = "pulldown" src="../../../image/pulldown.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="topnav">
+      <picker bindchange="bindPartPickerChange" value="{{indexPart}}" range="{{arrayPart}}">
+        <view class="picker">地区：{{arrayPart[indexPart]}}
+        <image class = "pulldown" src="../../../image/pulldown.png"></image></view>
+      </picker>
+    </view>
+    <view class="topnav">
+      <picker bindchange="bindTypePickerChange" value="{{arrayType[indexType01][indexType02]}}" range="{{arrayType[indexType01]}}">
+        <view class="picker">更多：{{arrayType[indexType01][indexType02]}}
+        <image class = "pulldown" src="../../../image/pulldown.png"></image></view>
+      </picker>
+    </view>
+  </view>
+  <view class="main">
+  <view wx:for="{{list}}" bindtap = "bindTap" data-index = "{{index}} "data-payflag = "{{item.PayFlag}}" data-userid = "{{item.userid}}" data-price = "{{item.Price}}" data-member = "{{item.Member}}"data-type = "{{item.TypeID}}" data-id = "{{item.TypeID=='99' ? item.NewsID : item.ProjectID }}">
+    <!--<navigator url="../details/details?id={{item.TypeID=='99' ? item.NewsID : item.ProjectID }}&type={{item.TypeID}}">-->
+      <view wx:if="{{item.TypeID=='99'}}">
+        <view class="brand_item">
+          <image src="{{'http://images.ziyawang.com'+item.NewsLogo}}" class="pic"></image>
+          <view class="right_cont">
+            <text class="country">{{item.NewsTitle}}</text>
+            <text class="name gray">{{item.Brief}}</text>
+            <text class="resource gray">来源：{{item.NewsAuthor}}</text>
+            <text class="time gray">时间：{{item.PublishTime}}</text>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class="brand_item">
+          <image src="{{'http://images.ziyawang.com'+item.PictureDes1}}" class="pic"></image>
+          <view class="right_cont">
+            <view class="tit">
+              <text class="desc">简介：{{item.Title}}</text>
+              <view wx:if="{{item.Member== '1'}}">
+                <image src="../../../image/vip.png" class="tit-img"></image>
+              </view>
+              <view wx:if="{{item.Member== '2'}}">
+                <image src="../../../image/fee.png" class="tit-img"></image>
+              </view>
+            </view>
+            <view class="pro-one">
+              <text class="area">{{item.ProArea}}</text>
+            </view>
+            <text class="area type">{{item.TypeName}}</text>
+            <text class="area">--{{item.AssetType}}</text>
+            <view class="price">
+              <view wx:if="{{item.TypeID=='1'}}">总金额：{{item.TotalMoney}}万元 转让价：{{item.TransferMoney}}万元</view>
+              <view wx:if="{{item.TypeID=='6'}}">融资额：{{item.TotalMoney}}万元</view>
+              <view wx:if="{{item.TypeID=='12'}}">市场价：{{item.MarketPrice}}万元 转让价：{{item.TransferMoney}}万元</view>
+              <view wx:if="{{item.TypeID=='16'}}">转让价：{{item.TransferMoney}}万元</view>
+              <view wx:if="{{item.TypeID=='17'}}">融资额：{{item.Money}}万元</view>
+              <view wx:if="{{item.TypeID=='18'}}">债权额：{{item.Money}}万元</view>
+              <view wx:if="{{item.TypeID=='19'}}">总金额：{{item.TotalMoney}}万元</view>
+              <view wx:if="{{item.TypeName=='法拍资产'}}">起拍价：{{item.Money}}万元</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    <!--</navigator>-->
+  </view>
+  </view>
+  <text hidden="{{hidden}}" class="myload">加载中...</text>
+</view>

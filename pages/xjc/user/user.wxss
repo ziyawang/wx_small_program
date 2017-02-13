@@ -1,0 +1,87 @@
+.bg-gray {
+  background: #f4f4f4;
+}
+
+.avatar {
+  width: 90rpx;
+  height: 90rpx;
+  display: block;
+  margin: 0 auto 30rpx;
+  border-radius: 50rpx;
+}
+
+.user_edit {
+  background: #ffd000;
+  font-size: 28rpx;
+  color: #fff;
+  padding: 0;
+  position: absolute;
+  right: 20rpx;
+  top: 10rpx;
+  line-height: 2;
+}
+
+.bg-yellow {
+  background: #ffd000;
+}
+
+.top-user {
+  padding: 50rpx 0 0;
+}
+
+.user_nickname, .user_area, .user_commpany {
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  padding-bottom: 20rpx;
+}
+
+.user_nickname {
+  font-size: 32rpx;
+}
+
+.mine {
+  display: flex;
+  padding: 20rpx 0;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.user_myYabi, .user_myCollect {
+  display: block;
+  font-size: 28rpx;
+  margin-top: 16rpx;
+}
+
+.yabiView, .collectView {
+  flex: 1;
+  text-align: center;
+}
+
+.user_yabiCount, .user_collectCount {
+  font-size: 36rpx;
+  color: #555;
+}
+
+.yabiView {
+  border-right: 1px solid #eee;
+}
+
+.member-center, .star-level, .set-up {
+  line-height: 1.6;
+  border-bottom: 1px solid #ccc;
+  font-size: 36rpx;
+  padding: 20rpx 20rpx 20rpx 30rpx;
+  background: #fff;
+}
+
+.right_style {
+  float: right;
+  width: 17rpx;
+  height: 33rpx;
+  margin-top: 10rpx;
+}
+
+.set-up {
+  border-bottom: none;
+}

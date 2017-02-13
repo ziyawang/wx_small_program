@@ -1,0 +1,10 @@
+/* pages/ucenter/index.wxss */
+.member-center,.star-level,.set-up{
+ border-bottom: 1px solid #ccc;
+ font-size: 36rpx;
+ padding: 20rpx 0;
+ background: #fff;
+}
+.set-up{
+    border-bottom: none;
+}

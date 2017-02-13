@@ -1,0 +1,11 @@
+<scroll-view class="regist">
+<image src="../../../image/login.png" class = "login_logo"></image>
+    <input class="phonenumberInput" type="number" maxlength="11" placeholder="请输入手机号" bindinput="phonenumerInput" focus/>
+    <view class="test-code">
+        <input class="smscodeInput"  maxlength="16" placeholder="请输入验证码" bindinput="smscodeInput"/>
+        <button class="smscodeButton" bindtap="smscodeButtonClick">获取验证码</button>
+    </view>
+    <input class="passwordInput" type="number" maxlength="11" placeholder="请输入密码" bindinput="passwordInput"/>
+    <input class="repasswordInput"  maxlength="16" placeholder="请再次输入密码" bindinput="repasswordInput"/>
+    <button class="registButton" bindtap="registButtonClick">注册</button>
+</scroll-view>

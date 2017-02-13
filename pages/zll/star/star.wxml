@@ -1,0 +1,12 @@
+<!--pages/ucenter/star/index.wxml-->
+<image src=""></image>
+<view wx:for="{{starsrc}}">
+  <image class="showstar" src="{{item}}"></image>
+</view>
+<text>(可选择完成以下认证点亮星级)</text>
+<view>
+    <image src=""></image>
+    <text>保证金认证</text>
+    <button bindtap="starDetail">详情说明</button>
+    <button bindtap="goToApp">开通</button>
+</view>

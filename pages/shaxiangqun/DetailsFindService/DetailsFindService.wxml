@@ -1,0 +1,62 @@
+<view class="content">
+  <view class="top-info">
+    <view class="top-info-person">
+      <image src="http://images.ziyawang.com{{Object.UserPicture}}" class="serve-avatar"></image>
+      <view class="top-info-r">
+        <view class="number">编号：{{Object.ServiceNumber}}</view>
+        <view class="time gray-dark">{{Object.created_at}}
+          <text class="ml10">浏览：{{Object.ViewCount}}</text>
+        </view>
+        <view class="member-type">
+          <text class="gray">会员类型：</text>
+          <view wx:if = "{{Object.right == ''}}">
+              <text>无</text>
+            </view>
+          <view wx:for="{{Object.showRightPic}}">
+            <image style="height:30rpx ; width:30rpx" src="{{item}}"></image>
+          </view>
+        </view>
+      </view>
+      <image src="{{src}}" class="collect-img" bindtap = "bindsha" data-id = "{{Object.ServiceID}}"></image>
+    </view>
+    <view class="company">
+      <text class="gray-dark">公司名称：</text>
+      <text class="orange">{{Object.ServiceName}}</text>
+    </view>
+    <view class="company">
+      <text class="gray-dark">所在地：</text>{{Object.ServiceLocation}}</view>
+    <view class="company">
+      <text class="gray-dark">规模（人）：</text>{{Object.Size}}</view>
+    <view class="company">
+      <text class="gray-dark">注册资金（万元）：</text>{{Object.Founds}}</view>
+    <view class="company">
+      <text class="gray-dark">联系人：</text>{{Object.ConnectPerson}}</view>
+    <view class="company gray-dark">
+      <text class="company-desc nobottom">公司简介：</text>
+      <view class="color3">{{Object.ServiceIntroduction}}</view>
+    </view>
+    <view class="company">
+      <text class="gray-dark">星级认证：</text>
+      <image src="{{Object.showlevelarr['1'] != '2' ? '../../../image/v203_0201.png' : '../../../image/v203_0101.png'}}" class="star-icon-single"></image>
+      <image src="{{Object.showlevelarr['2'] != '2' ? '../../../image/v203_0202.png' : '../../../image/v203_0102.png'}}" class="star-icon-single"></image>
+      <image src="{{Object.showlevelarr['3'] != '2' ? '../../../image/v203_0203.png' : '../../../image/v203_0103.png'}}" class="star-icon-single"></image>
+      <image src="{{Object.showlevelarr['4'] != '2' ? '../../../image/v203_0204.png' : '../../../image/v203_0104.png'}}" class="star-icon-single"></image>
+      <image src="{{Object.showlevelarr['5'] != '2' ? '../../../image/v203_0205.png' : '../../../image/v203_0105.png'}}" class="star-icon-single"></image>
+    </view>
+  </view>
+  <view class="serve-area">
+    <text class="company-desc">服务地区：</text>
+    <view class="color3">{{Object.ServiceArea}}</view>
+  </view>
+  <view class="serve-type">
+    <text class="company-desc">服务类型：</text>
+    <view class="color3">{{Object.ServiceType}}</view>
+  </view>
+  <view class="serve-photos">
+    <text class="company-desc">相关凭证：</text>
+    <image src="http://images.ziyawang.com{{Object.ConfirmationP1}}" class="photo-cert"></image>
+    <image src="http://images.ziyawang.com{{Object.ConfirmationP2}}" class="photo-cert"></image>
+    <image src="http://images.ziyawang.com{{Object.ConfirmationP3}}" class="photo-cert"></image>
+  </view>
+   <view class="bottom-btn"><button class="chat-btn" bindtap="call" data-insider = "{{Object.insider}}"  data-phone= "{{Object.ConnectPhone}}">约谈</button></view>
+</view>

@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="nav" hidden="{{myhidden}}">
+    <view class="topnav">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">类型：{{array[index]}}
+        <image class = "pulldown" src="../../../image/pulldown.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="topnav">
+      <picker bindchange="bindPartPickerChange" value="{{indexPart}}" range="{{arrayPart}}">
+        <view class="picker">地区：{{arrayPart[indexPart]}}
+        <image class = "pulldown" src="../../../image/pulldown.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="topnav">
+      <picker bindchange="bindTypePickerChange" value="{{indexType}}" range="{{arrayType}}">
+        <view class="picker">会员筛选：{{arrayType[indexType]}}
+        <image class = "pulldown" src="../../../image/pulldown.png"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="main">
+    <view wx:for="{{list}}">
+      <navigator url="../DetailsFindService/DetailsFindService?id={{item.ServiceID}}" class="scroll-view-item">
+        <image class="item-img" src="http://images.ziyawang.com{{item.ConfirmationP1}}"></image>
+        <view class="detail">
+          <view class="item-name">{{item.ServiceName}}</view>
+          <view class="stars">
+            <text class="star-cert">星级认证：</text>
+            <view class="star-icon">
+              <image src="{{item.showlevelarr['1'] != '2' ? '../../../image/v203_0201.png' : '../../../image/v203_0101.png'}}" class="star-icon-single"></image>
+              <image src="{{item.showlevelarr['2'] != '2' ? '../../../image/v203_0202.png' : '../../../image/v203_0102.png'}}" class="star-icon-single"></image>
+              <image src="{{item.showlevelarr['3'] != '2' ? '../../../image/v203_0203.png' : '../../../image/v203_0103.png'}}" class="star-icon-single"></image>
+              <image src="{{item.showlevelarr['4'] != '2' ? '../../../image/v203_0204.png' : '../../../image/v203_0104.png'}}" class="star-icon-single"></image>
+              <image src="{{item.showlevelarr['5'] != '2' ? '../../../image/v203_0205.png' : '../../../image/v203_0105.png'}}" class="star-icon-single"></image>
+            </view>
+          </view>
+          <view class="item-area">服务地区：
+            <text class="gray">{{item.ServiceArea}}</text>
+          </view>
+          <view class="item-info">服务类型：
+            <text class="gray">{{item.ServiceType}}</text>
+          </view>
+          <view class="item-member">
+            <text>会员类型：</text>
+            <view wx:if = "{{item.right == ''}}">
+              <text>无</text>
+            </view>
+            <view wx:for="{{item.showRightPic}}" class="member-icon">
+                  <image style="height:30rpx ; width:30rpx" src="{{item}}"></image>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

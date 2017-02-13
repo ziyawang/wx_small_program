@@ -1,0 +1,8 @@
+<view class="main">
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{items}}">
+      <radio value="{{item.num}}" checked="{{item.checked}}"/>{{item.value}}<text class="give">{{item.value2}}</text>
+    </label>
+  </radio-group>
+  <view class="btn-charge"><button bindtap="rechargeButtonClick" class="confirm">确认支付</button></view>
+</view>

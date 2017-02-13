@@ -1,0 +1,42 @@
+<view class="bg-gray">
+  <scroll-view>
+    <view class="bg-yellow top-user">
+      <view wx:if="{{UserPicture}}">
+        <image class="avatar" src="http://images.ziyawang.com{{UserPicture}}" bindtap="hasLogin" data-url="../userinfo/userinfo">用户头像</image>
+      </view>
+      <text class="user_edit" bindtap="editButtonClick">编辑</text>
+      <view class="user_nickname" bindtap="nameviewtap">{{username}}</view>
+      <view wx:if="{{userinfo.role == 1}}" class="user_area">{{userinfo.service.ServiceLocation}} </view>
+      <view wx:if="{{userinfo.role == 1}}" class="user_commpany">{{userinfo.service.ServiceName}}</view>
+    </view>
+    <view class="mine">
+      <view class="yabiView" bindtap="hasLogin" data-url="../yabicount/yabicount">
+        <text class="user_yabiCount" data-url="../yabicount/yabicount">{{userinfo.user.Account}}</text>
+        <text class="user_myYabi" data-url="../yabicount/yabicount">我的芽币</text>
+      </view>
+      <view class="collectView" bindtap="hasLogin" data-url="../mycollect/mycollect">
+        <text class="user_collectCount" data-url="../mycollect/mycollect">{{userinfo.MyColCount}}</text>
+        <text class="user_myCollect" data-url="../mycollect/mycollect">我的收藏</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="btn-area">
+  <view class="member-center" bindtap="goPub">发布信息
+    <image src="../../../image/right.png" class="right_style"></image>
+  </view>
+  <view bindtap="confirmClick" class="member-center">服务方认证
+    <image src="../../../image/right.png" class="right_style"></image>
+  </view>
+  <view wx:if="{{userinfo.role == 1}}">
+    <navigator url="../../zll/member/member" class="member-center">会员中心
+      <image src="../../../image/right.png" class="right_style"></image>
+    </navigator>
+    <view class="member-center" bindtap="goStar">星级认证
+      <image src="../../../image/right.png" class="right_style"></image>
+    </view>
+  </view>
+  <navigator url="../../zll/setting/setting" class="set-up">设置
+    <image src="../../../image/right.png" class="right_style"></image>
+  </navigator>
+</view>

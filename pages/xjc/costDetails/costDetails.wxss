@@ -1,0 +1,25 @@
+/* pages/costDetails/costDetails.wxss */
+.details{
+    overflow: hidden;
+    padding: 30rpx 20rpx;
+    border-bottom: 1px solid #f7f7f7;
+}
+.money{
+    float: right;
+}
+.behaviour{
+    float: left;
+}
+.green{
+    color: #30c415;
+}
+.red{
+    color: #f00;
+}
+.desc-r{
+    float: right;
+}
+.p30{
+    padding: 30rpx 20rpx;
+    border-bottom: 1px solid #f7f7f7;
+}

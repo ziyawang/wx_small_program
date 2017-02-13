@@ -1,0 +1,21 @@
+/* pages/zll/setting/setting.wxss */
+.bg-gray{
+    background: #f4f4f4;
+}
+.setting-item{
+    line-height: 2.0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    font-size: 36rpx;
+    color: #555;
+    padding: 20rpx;
+}
+.btn-quit{
+    padding: 80rpx 20rpx 0;
+}
+.quit{
+    background: #ff5656;
+    color: #fff;
+    font-size: 40rpx;
+    line-height: 2.0;
+}

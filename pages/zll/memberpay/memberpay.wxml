@@ -1,0 +1,19 @@
+<view>
+  <view wx:if="{{memberPicture}}">
+    <image src="../../../image/{{memberPicture}}" class="member-type-img"></image>
+  </view>
+  <view class="open">
+    <text class="open-cap">开通{{memberName}}VIP享受精彩特权</text>
+    <navigator url="../memberright/memberright?memberName={{memberName}}" hover-class="navigator-hover" class="know">[了解特权]</navigator>
+  </view>
+  <view class="paymember">
+    <radio-group bindchange="payIdChange" class="member-time">
+      <view wx:for="{{memberPayList}}">
+        <label class="radio" class="member-radio">
+          <radio value="{{item[2]}}" checked="{{item[3]}}" />{{item[0]}}{{item[1]}}元
+        </label>
+      </view>
+    </radio-group>
+  </view>
+  <button type="default" bindtap="memberPay" hover-class="other-button-hover" class="wx-pay"> 微信支付 </button>
+</view>

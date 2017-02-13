@@ -1,0 +1,165 @@
+/* pages/details/details.wxss */
+@import "/wxParse/wxParse.wxss";
+.content{
+  background: #f4f4f4;
+}
+.info-title{
+  display: flex;
+  padding: 20rpx 0;
+  position: relative;
+}
+.pic {
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+.b-title{
+  font-size: 36rpx;
+  padding: 0 20rpx;
+}
+.bdb{
+  border-bottom: 1px solid #f0f0f0;
+}
+.p20{
+  padding-left:20rpx;
+  padding-right: 20rpx;
+}
+.padding-b{
+  padding-bottom: 30rpx;
+}
+.b-title-cap{
+  display: block;
+  padding: 20rpx 0;
+}
+.bg-white{
+  background: #fff;
+}
+.f12{
+  font-size: 24rpx;
+}
+.gray{
+  color: #999;
+}
+.user{
+  margin-top: 18rpx;
+}
+.info-title-right{
+  padding-left: 20rpx;
+}
+.collect{
+  position: absolute;
+  right: 0rpx;
+  top: 48rpx;
+}
+.collect-img{
+  width: 39rpx;
+  height: 34rpx;
+}
+.telephone{
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+.f16{
+  font-size: 28rpx;
+  color: #333;
+}
+.padt{
+  padding-top: 30rpx;
+}
+.gray-dark{
+  color: #666;
+}
+.sub-title{
+  display: block;
+  font-weight: bold;
+}
+.spot,.photo-title{
+  padding-bottom: 30rpx;
+}
+.others,.issue-spot,.desc,.photos,.promise{
+  margin-top: 20rpx;
+  background: #fff;
+  padding-bottom: 30rpx;
+}
+.issue-spot{
+  padding-left: 20rpx;
+}
+.others-title{
+  padding-top: 30rpx;
+}
+.row{
+  overflow: hidden;
+  display: flex;
+}
+.issue-capital,.issue-interest,.issue-door{
+  flex: 1.5;
+}
+.issue-notice,.issue-time,.issue-mort{
+  flex: 2;
+}
+.orange{
+  color: #ffad00;
+}
+.desc,.photos{
+  padding-top: 30rpx;
+}
+.desc-con{
+  padding-top: 30rpx;
+  line-height: 1.5;
+  text-align: justify;
+}
+.photo-cert{
+  width: 160rpx;
+  height: 160rpx;
+}
+.promise{
+  font-size: 28rpx;
+  color: #f00;
+  text-align: center;
+  padding-top: 30rpx;
+}
+.promise-con{
+  display: block;
+}
+.chat{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  padding: 30rpx 20rpx;
+  margin-bottom: 100rpx;
+}
+.phonenumber{
+  padding: 0 0 30rpx;
+}
+.photo-cert{
+  margin-right: 10rpx;
+}
+.chuzhi{
+  font-size: 36rpx;
+  font-weight: bold;
+  padding: 20rpx;
+}
+.lh2{
+  line-height: 2;
+}
+.chuzhi-time{
+  margin: 10rpx 0 20rpx;
+}
+.bottom-btn{
+  background: #fff;
+  padding: 20rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 120rpx;
+}
+.chat-btn{
+  background: #ffd000;
+  border: none;
+  width: 100%;
+  height: 100%;
+  line-height: 80rpx;
+}

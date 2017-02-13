@@ -1,0 +1,32 @@
+.container{
+  padding: 0 20rpx;
+}
+.brand_item{
+  display: flex;
+}
+.right_cont{
+  font-size: 24rpx;
+  color: #777;
+  flex: 1
+}
+.consume{
+  font-size: 36rpx;
+  color: #333;
+  display: block;
+}
+.yabi-counts{
+  flex: 2;
+  color: #30c415;
+  text-align: right;
+  margin-top: 16rpx;
+}
+.minus{
+  color: #f00;
+}
+.f14{
+  font-size: 28rpx;
+}
+.item{
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ccc;
+}

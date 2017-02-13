@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor": "#ffd000",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "信息详情",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": true
+}

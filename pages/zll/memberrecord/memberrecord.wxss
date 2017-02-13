@@ -1,0 +1,21 @@
+/* pages/zll/memberrecord/memberrecord.wxss */
+.item{
+    overflow: hidden;
+    padding: 20rpx;
+    border-bottom: 1px solid #eee;
+}
+.open-desc{
+    float: left;
+}
+.open-money{
+    float: right;
+    font-size: 48rpx;
+    color: #30c415;
+    padding-top: 35rpx;
+}
+.open-times{
+    display: block;
+    font-size: 24rpx;
+    color: #999;
+    margin-top: 10rpx;
+}

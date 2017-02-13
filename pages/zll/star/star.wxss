@@ -1,0 +1,6 @@
+/* pages/ucenter/star/index.wxss */
+.showstar{
+    height: 50px;
+    width: 50px;
+    border: 1px solid red;
+}

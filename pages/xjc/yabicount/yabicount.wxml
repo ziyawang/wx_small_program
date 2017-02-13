@@ -1,0 +1,8 @@
+<view class="bg-white">
+  <image src="../../../image/yabi.png" class="yabi-icon"></image>
+  <text class="yabi-title">账户余额</text>
+  <view class="yabi-count"><text class="fwb">{{Account}}</text>芽币</view>
+  <button bindtap="rechargeButtonClick" class="recharge">充 值</button>
+  <view class="yabi-tip">充值¥1，可购买10芽币。芽币玩转资芽的法宝。</view>
+  <button bindtap="detailButtonClick" class="yabi-desc">明 细</button>
+</view>

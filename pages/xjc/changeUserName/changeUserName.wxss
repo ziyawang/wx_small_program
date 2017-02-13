@@ -1,0 +1,16 @@
+/* pages/changeUserName/changeUserName.wxss */
+page{
+    background: #f7f7f7;
+}
+.usernameinput{
+    background: #fff;
+    height: 80rpx;
+    margin: 30rpx 0;
+    width: 100%;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+}
+.sureButton{
+    background: #ffd000;
+    width: 96%;
+}

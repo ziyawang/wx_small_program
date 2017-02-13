@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="main">
+    <view wx:for="{{list}}" class="item">
+      <navigator url="../costDetails/costDetails?Type={{item.Type}}&Money={{item.Money}}&created_at={{item.created_at}}&Operates={{item.Operates}}&OrderNumber={{item.OrderNumber}}">
+        <view wx:if="{{item.Type=='1'}}">
+          <view class="brand_item">
+            <view class="right_cont">
+              <text class="consume">充值芽币</text>
+              <text>{{item.created_at}}</text>
+            </view>
+            <view class="yabi-counts">+{{item.Money}}<text class="f14">芽币</text></view>
+          </view>
+        </view>
+        <view wx:else>
+          <view class="brand_item">
+            <view class="right_cont">
+              <text class="consume">付费约谈</text>
+              <text>{{item.created_at}}</text>
+            </view>
+            <view class="yabi-counts minus">-{{item.Money}}<text class="f14">芽币</text></view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <text hidden="{{hidden}}" class="myload">加载中...</text>
+</view>

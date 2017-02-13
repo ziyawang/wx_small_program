@@ -1,0 +1,10 @@
+<view class="page">
+<view class="red">查看权限</view>
+<view class="desc">在会员期间内，可免费查看本网站所有{{payName}}类VIP和收费信息。</view>
+<view class="red">赠送芽币</view>
+<view class="desc">按办理会员的价格赠送芽币（例：{{payList[0][0]}}{{payList[0][1]}}元赠送{{payList[0][1]}}芽币，{{payList[1][0]}}{{payList[1][1]}}元赠送{{payList[1][1]}}芽币）。可方便您查看其他类型信息。</view>
+<view class="red">定制推送</view>
+<view class="desc">系统会根据您的指定需求帮您筛选指定的{{payName}}信息，并推送到您的系统消息或手机短信中（客服人员会主动联系您录入需求）。</view>
+<view class="red">联系方式展示</view>
+<view class="desc">升级为会员后，您服务方的展示页面联系方式将公开，会有更多用户第一时间主动联系您。</view>
+</view>

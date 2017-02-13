@@ -1,0 +1,34 @@
+<view class="details">
+  <view wx:if="{{Type=='1'}}" class="behaviour">
+    <text>充值芽币</text>
+  </view>
+  <view wx:else class="behaviour">
+    <text>付费约谈</text>
+  </view>
+  <view wx:if="{{Type=='1'}}" class="money">
+    <text class="green">+{{Money}}芽币</text>
+  </view>
+  <view wx:else class="money">
+    <text class="red">-{{Money}}芽币</text>
+  </view>
+</view>
+<view wx:if="{{Type=='1'}}" class="p30">
+  <text>类型</text>
+  <text class="desc-r">充值</text>
+</view>
+<view wx:else class="p30">
+  <text>类型</text>
+  <text class="desc-r">付费</text>
+</view>
+<view class="p30">
+  <text>时间</text>
+  <text class="desc-r">{{created_at}}</text>
+</view>
+<view class="p30">
+  <text>操作</text>
+  <text class="desc-r">{{Operates}}</text>
+</view>
+<view class="p30">
+  <text>编号</text>
+  <text class="desc-r">{{OrderNumber}}</text>
+</view>

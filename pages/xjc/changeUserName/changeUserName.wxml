@@ -1,0 +1,2 @@
+<input class="usernameinput"   placeholder="请输入新的昵称" bindinput="usernameInput" auto-focus/>
+<button class="sureButton" bindtap="sureButtonClick">确认修改</button>

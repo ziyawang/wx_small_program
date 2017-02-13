@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/benben/FindInfo/FindInfo",
+    "pages/shaxiangqun/FindService/FindService",
+    "pages/xjc/user/user",
+    "pages/benben/details/details",
+    "pages/shaxiangqun/DetailsFindService/DetailsFindService",
+    "pages/zll/member/member",
+    "pages/zll/memberpay/memberpay",
+    "pages/zll/memberright/memberright",
+    "pages/zll/memberrecord/memberrecord",
+    "pages/zll/star/star",
+    "pages/zll/setting/setting",
+    "pages/zll/setting/ziyalaw",
+    "pages/lds/reConfirm/reConfirm",
+    "pages/lds/confirm/confirm",
+    "pages/xjc/login/login",
+    "pages/xjc/regist/regist",
+    "pages/xjc/mycollect/mycollect",
+    "pages/xjc/yabicount/yabicount",
+    "pages/xjc/recharge/recharge",
+    "pages/xjc/costDetail/costDetail",
+    "pages/xjc/costDetails/costDetails",
+    "pages/xjc/userinfo/userinfo",
+    "pages/xjc/changePassWord/changePassWord",
+    "pages/xjc/changeUserName/changeUserName"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fdd000",
+    "navigationBarTitleText": "资芽",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/benben/FindInfo/FindInfo",
+        "text": "找信息",
+        "iconPath": "image/zhaoxinxi2.png",
+        "selectedIconPath": "image/zhaoxinxi1.png"
+      },
+      {
+        "pagePath": "pages/shaxiangqun/FindService/FindService",
+        "text": "找服务",
+        "iconPath": "image/zhaofuwu2.png",
+        "selectedIconPath": "image/zhaofuwu1.png"
+      },
+      {
+        "pagePath": "pages/xjc/user/user",
+        "text": "我的",
+        "iconPath": "image/wode2.png",
+        "selectedIconPath": "image/wode1.png"
+      }
+    ],
+    "selectedColor": "#ffd000",
+    "color": "#fff",
+    "backgroundColor": "#333"
+  }
+}

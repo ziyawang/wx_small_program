@@ -1,0 +1,102 @@
+<!-- 新建任务 -->
+<form bindsubmit="formSubmit">
+  <view class="mod-a">
+    <view class="mod oh">
+      <text class="company-name">企业名称:</text>
+      <input name="ServiceName" class="txt" maxlength="100" placeholder="请输入企业名称" />
+    </view>
+  </view>
+  <view class="section">
+    <view class="section_title">企业所在地：</view>
+    <view class="area-com">
+    <picker bindchange="bindProvinceChange" value="{{provinceArray[provinceIndex]}}" range="{{provinceArray}}" name="province">
+      <view class="picker">
+        省份:{{provinceArray[provinceIndex]}}
+      </view>
+    </picker>
+    <picker bindchange="bindCityChange" value="{{cityArray[cityIndex]}}" range="{{cityArray}}" name="city">
+      <view class="picker city">
+        城市:{{cityArray[cityIndex]}}
+      </view>
+    </picker>
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod t-name">
+      <text class="key">企业规模(人):</text>
+      <input name="Size" class="input" maxlength="100" placeholder="请输入..." />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod t-name">
+      <text class="key">注册资金(万):</text>
+      <input name="Founds" class="input" maxlength="100" placeholder="请输入..." />
+    </view>
+  </view>
+  <view class="section">
+
+    <!--<view class="section__title">注册日期</view>-->
+    <picker mode="date" value="{{date}}" start="1990-10-01" end="2050-09-01" bindchange="bindDateChange" name="RegTime">
+      <view class="picker">
+        成立时间:{{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="mod-a">
+    <view class="mod t-name">
+      <text class="key">联系人姓名:</text>
+      <input name="ConnectPerson" class="input" maxlength="100" placeholder="请输入..." />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod t-name">
+      <text class="key">联系人电话:</text>
+      <input name="ConnectPhone" class="input" maxlength="100" placeholder="请输入..." />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod">
+      <text class="key company-desc">企业简介:</text>
+      <textarea name="ServiceIntroduction" bindblur="bindTextAreaBlur" auto-height placeholder="简介" class="company-desc-txt" />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod">
+      <text>服务地区:</text>
+      <checkbox-group bindchange="checkboxChangeArea" name="ServiceArea" class="check-group">
+        <label class="checkbox" wx:for="{{areas}}">
+          <view wx:if="{{item.name=='全国'}}">
+            <checkbox class="i-check" value="{{item.name}}" />{{item.value}}
+          </view>
+          <view wx:else>
+            <checkbox class="i-check" value="{{item.name}}" checked="{{checked}}" />{{item.value}}
+          </view>
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod">
+      <text>服务类型:</text>
+      <checkbox-group bindchange="checkboxChange" name="ServiceType" class="check-group">
+        <label class="checkbox-type" wx:for="{{items}}">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}" class="i-check" />{{item.value}}
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod">
+      <text>上传相关凭证:</text>
+      <text bindtap="bindChooseImage">选择图片</text>
+      <view class="oh">
+      <view wx:for="{{tempFilePaths}}" class="img-box">
+        <image src="{{item}}" bindlongtap="delete" class="cert-img"></image><view bindtap="deleteImg" class="delete-img">×</view>
+      </view>
+      </view>
+    </view>
+  </view>
+  <view class="create" wx:if="{{role!=2}}">
+    <button formType="submit" class="sub-btn">提交</button>
+  </view>
+</form>

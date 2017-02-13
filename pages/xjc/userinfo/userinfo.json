@@ -1,0 +1,6 @@
+{
+    "navigationBarBackgroundColor": "#ffd000",
+    "navigationBarTitleText": "个人信息",
+    "backgroundColor": "#eee",
+    "enablePullDownRefresh": false
+}

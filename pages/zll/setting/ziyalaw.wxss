@@ -1,0 +1,6 @@
+/* pages/zll/setting/ziyalaw.wxss */
+.law{
+    line-height: 48rpx;
+    display: block;
+    padding: 20rpx;
+}

@@ -1,0 +1,25 @@
+<view class="usericonView" bindtap="usericonClick">
+  <text class="userinfo-l">头像</text>
+  <image src="{{UserPicture}}" class="img userinfo-r"></image>
+</view>
+<view class="usernameView p30" bindtap="usernameClick">
+  <text class="userinfo-l">昵称</text>
+  <text class="userinfo-r">{{username}}</text>
+</view>
+<view class="p30">
+  <text class="userinfo-l">联系电话</text>
+  <text class="userinfo-r">{{phonenumber}}</text>
+</view>
+<view class="usermember">
+  <text class="userinfo-l">会员类型</text>
+  <view wx:if="{{rightArr.count==0 || rightArr==null}}" class="userinfo-r">
+  <text>无</text>
+  </view>
+  <view wx:for="{{rightArr}}" class="userinfo-r">
+    <image src="../../../image/right_{{item}}.png" class="member-icon"></image>
+  </view>
+</view>
+<view class="passwordView p30" bindtap="passwordClick">
+  <text class="userinfo-l">修改密码</text>
+  <image src="../../../image/right.png" class="right_style"></image>
+</view>

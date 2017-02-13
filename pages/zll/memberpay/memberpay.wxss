@@ -1,0 +1,32 @@
+/* pages/memberpay/index.wxss */
+.member-type-img{
+    margin: 30rpx auto;
+    display: block;
+    width: 165rpx;
+    height: 138rpx;
+}
+.open{
+    font-size: 24rpx;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30rpx;
+}
+.know{
+    display: inline;
+    color: #f00;
+}
+.member-radio{
+    font-size: 32rpx;
+    margin-bottom: 30rpx;
+    display: block;
+}
+.paymember{
+    padding: 0 5%;
+}
+.wx-pay{
+    background: #ffd000;
+    box-shadow: 0 1px 5px #dcdbd7;
+    width: 90%;
+    line-height: 2.5;
+    font-size: 32rpx;
+}

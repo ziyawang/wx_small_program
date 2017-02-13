@@ -1,0 +1,49 @@
+<view class="container">
+  <view class="main">
+    <view wx:for="{{list}}" class="item" bindtap = "bindTap" data-type = "{{item.TypeID}}" data-id = "{{item.ItemID}}" >
+      <view wx:if="{{item.TypeID=='1'}}">
+        <view class="brand_item">
+          <view class="right_cont">
+            <view class="type-name">{{item.TypeName}}</view>
+            <view class="area">
+              <text class="area-l">地区：</text>
+              <view class="area-r limit-area">{{item.ProArea}}</view>
+            </view>
+            <view class="desc">
+              <text class="desc-l">文字描述：</text>
+              <view class="desc-r">{{item.WordDes}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:elif="{{item.TypeID=='2'}}" class="noshow">
+      <text>该条收藏无法在小程序上显示。</text>
+      </view>
+      <view wx:elif="{{item.TypeID=='3'}}">
+        <view class="brand_item news-collect">
+          <image src="{{'http://images.ziyawang.com'+item.NewsLogo}}" class="pic news-pic"></image>
+          <view class="right_cont news-coll-con">
+            <text class="country news-coll-tit">{{item.NewsTitle}}</text>
+            <text class="time gray news-coll-time">时间：{{item.CollectTime}}</text>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class="brand_item">
+          <view class="right_cont">
+            <view class="type-name">{{item.ServiceName}}</view>
+            <view class="desc">
+              <text class="desc-l">服务地区：</text>
+              <view class="desc-r limit-area">{{item.ServiceArea}}</view>
+            </view>
+            <view class="desc">
+              <text class="desc-l">服务类型：</text>
+              <view class="desc-r">{{item.ServiceType}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <text hidden="{{hidden}}" class="myload">加载中...</text>
+</view>

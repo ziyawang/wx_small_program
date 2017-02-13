@@ -1,0 +1,116 @@
+.mod-a{
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.area-com{
+  display: flex;
+}
+.key{
+  float: left;
+  height: 48rpx;
+  line-height: 48rpx;
+}
+.fr{
+  float: right;
+}
+.input{
+  height: 48rpx;
+  line-height: 48rpx;
+  padding-left: 10rpx;
+}
+.section{
+  padding: 30rpx 20rpx;
+  /*display: flex;*/
+  border-bottom: 1rpx solid #eee;
+}
+.section_title{
+  float:left;
+}
+.city{
+  margin-left: 20rpx;
+}
+.company-desc{
+  display: block;
+  float: none;
+  margin-bottom: 20rpx;
+}
+.check-group{
+  overflow: hidden;
+}
+.checkbox{
+  float: left;
+  width: 33%;
+}
+.i-check{
+  margin-top: 20rpx;
+}
+.checkbox-type{
+  width: 100%;
+  display: block;
+}
+.oh{
+  overflow: hidden;
+}
+.img-box{
+  padding-top: 20rpx;
+  overflow: hidden;
+  float: left;
+  width: 33%;
+  height: 160rpx;
+  position: relative;
+}
+.cert-img{
+  width: 160rpx;
+  height: 160rpx;
+}
+.create{
+  padding: 20rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  height: 120rpx;
+  background: #f7f7f7;
+  z-index: 99;
+}
+.sub-btn{
+  width: 100%;
+  background: #ffd000;
+  height: 100%;
+  line-height: 80rpx;
+}
+page{
+  padding-bottom: 120rpx;
+}
+.company-desc-txt{
+  width: 100%;
+}
+.company-name{
+  float: left;
+  height: 48rpx;
+  line-height: 48rpx;
+}
+.txt{
+  float: right;
+  width: calc(100% - 5em - 10rpx);
+  height: 48rpx;
+  line-height: 48rpx;
+}
+.build-date{
+  width: 100%;
+}
+.delete-img{
+  width: 33rpx;
+  height: 33rpx;
+  background: rgba(0,0,0,0.5);
+  color: #ffd000;
+  position: absolute;
+  top: 20rpx;
+  left: 127rpx;
+  text-align: center;
+  line-height: 36rpx;
+}
+.mt4{
+  margin-top: 10rpx;
+}

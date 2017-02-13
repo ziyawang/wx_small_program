@@ -1,0 +1,67 @@
+/* pages/member/index.wxss */
+.bg-gray{
+    background: #f4f4f4;
+}
+.member-center-tips{
+    color: #f00;
+    padding: 20rpx;
+    
+    font-size: 26rpx;
+}
+.user-img{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    margin-left: 20rpx;
+}
+.user-member{
+    padding: 20rpx 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    margin-bottom: 20rpx;
+    background: #fff;
+}
+.current{
+    font-size: 24rpx;
+}
+.member-icon-set{
+    margin-top: -4rpx;
+}
+.member-icon{
+    width: 55rpx; 
+    height: 46rpx;
+    margin-right: 10rpx;
+}
+.user-member-r{
+    display: flex;
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+}
+.rechage-type{
+    overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    font-size: 32rpx;
+}
+.recharge-icon{
+    float: left;
+    width: 50%;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 30rpx 0;
+    text-align: center;
+    display: block;
+}
+.recharge-icon:last-child{
+    border-bottom: none;
+}
+.pic_style{
+    display: block ;
+    width: 55rpx ;
+    height : 46rpx ;
+    margin: 0 auto 20rpx;
+}

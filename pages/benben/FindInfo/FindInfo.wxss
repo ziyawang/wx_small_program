@@ -1,0 +1,139 @@
+
+.main{
+  margin-top: 88rpx;
+}
+.container .brand_item {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 20rpx 10rpx;
+  background: #fff;
+}
+
+.container .brand_item .pic {
+  display: block;
+  width: 220rpx;
+  height: 160rpx;
+}
+
+.right_cont {
+  width: calc(100% - 220rpx);
+  padding-top: 0;
+  padding-left: 10rpx;
+}
+
+.tit {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.right_cont .desc {
+  display: block;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  height: 40rpx;
+}
+
+.tit-img {
+  width: 77rpx;
+  height: 17rpx;
+}
+
+.right_cont .area {
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  color: #999;
+  font-size: 24rpx;
+  height: 40rpx;
+  line-height: 44rpx;
+}
+
+.type {
+  font-size: 24rpx;
+  height: 40rpx;
+  line-height: 44rpx;
+}
+
+.pro-one {
+  height: 40rpx;
+  line-height: 44rpx;
+}
+
+.price {
+  font-size: 24rpx;
+  color: #ffa000;
+  height: 40rpx;
+  line-height: 44rpx;
+}
+
+.price view {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.right_cont .ourprice {
+  color: #f16236;
+  font-weight: bold;
+}
+
+.right_cont .discount {
+  height: 16px;
+  line-height: 16px;
+  margin: 0 10px;
+  padding: 1px 6px 1px 10px;
+  background: url(http://www.huanqiuxiaozhen.com/assets/images/discount-bg.png) no-repeat center;
+  background-size: cover;
+  color: #fff;
+  font-size: 12px;
+}
+
+.right_cont .marketprice {
+  text-decoration: line-through;
+  color: #939393;
+}
+
+.myload {
+  text-align: center;
+  padding: 20rpx 0;
+  font-family: 'Microsoft Yahei';
+  color: #666;
+}
+
+.nav {
+  display: flex;
+  line-height: 88rpx;
+  position: fixed;
+  top: 0;
+  background: #f6f3ee;
+  width: 100%;
+  z-index: 999;
+  height: 88rpx;
+  overflow: hidden;
+}
+
+.topnav {
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+}
+.country,.name,.resource,.time{
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.gray{
+  color: #999;
+}
+.pulldown{
+  margin-left: 5rpx ;
+  width: 28rpx ;
+  height : 17rpx ; 
+}

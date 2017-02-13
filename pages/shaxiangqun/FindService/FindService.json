@@ -1,0 +1,6 @@
+{
+    "navigationBarBackgroundColor": "#ffd000",
+    "navigationBarTitleText": "找服务",
+    "backgroundColor": "#eee",
+    "enablePullDownRefresh": true
+}

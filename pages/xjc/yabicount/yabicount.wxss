@@ -1,0 +1,44 @@
+/* pages/yabicount/yabicount.wxss */
+.yabi-icon{
+    width: 150rpx;
+    height: 150rpx;
+    display: block;
+    margin: 80rpx auto 30rpx;
+}
+.yabi-title{
+    font-size: 32rpx;
+    display: block;
+    text-align: center;
+}
+.yabi-count{
+    text-align: center;
+    font-size: 34rpx;
+    margin: 30rpx auto 70rpx;
+}
+.recharge{
+    width: 90%;
+    background: #ffd000;
+    font-size: 30rpx;
+    color: #000;
+}
+.yabi-tip{
+    font-size: 26rpx;
+    color: #666;
+    text-align: center;
+    margin: 30rpx auto;
+}
+.yabi-desc{
+    background: #fff;
+    border: 1px solid #ffad00;
+    font-size: 30rpx;
+    width: 140rpx;
+    position: absolute;
+    top: 30rpx;
+    right: 5%;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.fwb{
+    font-weight: bold;
+    font-size: 40rpx;
+}

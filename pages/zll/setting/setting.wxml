@@ -1,0 +1,9 @@
+<scroll-view class="bg-gray">
+  <view class="setting-item">
+    <navigator url="./ziyalaw" hover-class="navigator-hover">资芽公约</navigator>
+  </view>
+  <view bindtap="clearCache" class="setting-item">清除缓存</view>
+  <view wx:if="{{isLogin}}" class="btn-quit">
+    <button bindtap="logout" class="quit">退出登录</button>
+  </view>
+</scroll-view>

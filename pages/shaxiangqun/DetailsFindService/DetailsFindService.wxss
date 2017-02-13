@@ -1,0 +1,103 @@
+/* pages/shaxiangqun/DetailsFindService/DetailsFindService.wxss */
+.content{
+    background: #f4f4f4;
+}
+.top-info-person,.member-type{
+    display: flex;
+}
+.top-info-person{
+    position: relative;
+    padding: 20rpx 0;
+}
+.top-info{
+    padding: 0 20rpx 20rpx;
+    background: #fff;
+    font-size: 32rpx;
+}
+.serve-avatar{
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+}
+.top-info-r{
+    font-size: 24rpx;
+    margin: 20rpx 0 0 20rpx;
+}
+.time{
+    padding: 10rpx 0;
+}
+.number{
+    font-size: 28rpx;
+}
+.ml10{
+    margin-left: 10rpx;
+}
+.gray-dark{
+    color: #666;
+}
+.color3{
+    color: #333;
+}
+.orange{
+    color: #ffad00;
+}
+.company{
+    padding: 30rpx 0;
+    border-top: 1px solid #eee;
+}
+.company-desc{
+    display: block;
+    padding-bottom: 30rpx;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30rpx;
+    color: #666;
+}
+.nobottom{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.star-icon-single{
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 10rpx;
+}
+.serve-area,.serve-type,.serve-photos{
+    background: #fff;
+    margin-top: 20rpx;
+    padding: 30rpx 20rpx;
+    font-size: 32rpx;
+}
+.serve-photos{
+    padding-bottom: 100rpx;
+}
+.photo-cert{
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 10rpx;
+}
+.collect-img{
+  width: 39rpx;
+  height: 34rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 50%;
+  margin-top: -17rpx;
+}
+.bottom-btn{
+  background: #fff;
+  padding: 20rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 120rpx;
+}
+.chat-btn{
+  background: #ffd000;
+  border: none;
+  width: 100%;
+  height: 100%;
+  line-height: 80rpx;
+}

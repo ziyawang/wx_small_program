@@ -1,0 +1,26 @@
+/* pages/recharge/recharge.wxss */
+.main{
+    font-size: 32rpx;
+    padding: 80rpx 20rpx 0;
+}
+.radio-group{
+    overflow: hidden;
+}
+.radio{
+    display: block;
+    margin: 0 0 40rpx;
+}
+.btn-charge{
+    padding-top: 40rpx;
+}
+.confirm{
+    background: #ffd000;
+    border: 1px solid #ffd000;
+    font-size: 36rpx;
+    line-height: 2;
+}
+.give{
+    font-size: 24rpx;
+    margin-left: 20rpx;
+    color: #f00;
+}

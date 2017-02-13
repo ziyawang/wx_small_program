@@ -1,0 +1,35 @@
+<!--pages/member/index.wxml-->
+<view class="bg-gray">
+  <view class="member-center-tips">注：根据您的需求可同时办理多个类型会员</view>
+  <view class="user-member">
+    <navigator url="../memberrecord/memberrecord" class="user-member-l">
+      <image src="http://images.ziyawang.com{{userInfo.user.UserPicture}}" class="user-img"></image>
+    </navigator>
+    <view class="user-member-r">
+      <text class="current">您当前的会员类型为：</text>
+      <view wx:for="{{showRightPic}}" class="member-icon-set">
+        <image src="{{item}}" data-index="{{index}}" bindtap="showTime" class="member-icon"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="member-center-tips">请选择您需要的会员类型：</view>
+
+  <view class="rechage-type">
+    <navigator url="../memberpay/memberpay?memberName=资产包&picture=right_zcb.png" hover-class="navigator-hover" class="recharge-icon">
+    <image class = "pic_style" src="../../../image/v2020201.png"></image>资产包
+    </navigator>
+    <navigator url="../memberpay/memberpay?memberName=企业商账&picture=right_qysz.png" hover-class="navigator-hover" class="recharge-icon">
+    <image class = "pic_style" src="../../../image/v2020202.png"></image>
+    企业商账</navigator>
+    <navigator url="../memberpay/memberpay?memberName=固定资产&picture=right_gdzc.png" hover-class="navigator-hover" class="recharge-icon">
+    <image class = "pic_style" src="../../../image/v2020203.png"></image>
+    固定资产</navigator>
+    <navigator url="../memberpay/memberpay?memberName=融资信息&picture=right_rzxx.png" hover-class="navigator-hover" class="recharge-icon">
+    <image class = "pic_style" src="../../../image/v2020204.png"></image>
+    融资信息</navigator>
+    <navigator url="../memberpay/memberpay?memberName=个人债权&picture=right_grzq.png" hover-class="navigator-hover" class="recharge-icon">
+    <image class = "pic_style" src="../../../image/v2020205.png"></image>
+    个人债权</navigator>
+  </view>
+</view>

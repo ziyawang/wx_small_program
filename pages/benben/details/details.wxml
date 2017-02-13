@@ -1,0 +1,355 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="content">
+  <scroll-view>
+    <view wx:if="{{TypeID=='99'}}" class="bg-white f16">
+      <view>
+        <view class="chuzhi">{{Object.NewsTitle}}</view>
+        <view class="gray p20 f12">来源：{{Object.NewsAuthor}}</view>
+        <view class="p20 f12 chuzhi-time"><view class="gray bdb padding-b">时间：{{Object.PublishTime}}</view></view>
+        <view class="p20 lh2"><template is="wxParse" data="{{wxParseData:article.nodes}}" /></view>
+      </view>
+    </view>
+    <view wx:else>
+      <view>
+        <view class="b-title bg-white">
+          <text class="bdb b-title-cap">{{Object.Title}}</text>
+        </view>
+        <view class="p20 bg-white">
+          <view class="info-title bdb">
+            <image src="http://images.ziyawang.com{{Object.UserPicture}}" class="pic"></image>
+            <view class="info-title-right">
+              <view class="user">
+                <text class="telephone">{{Object.username}}</text>
+                <text class="number f12">FB{{Object.ProjectID}}</text>
+              </view>
+              <view class="f12 gray">
+                <text class="visit-count">浏览：{{Object.ViewCount}}次     </text>
+                <text class="publish-time">{{Object.PublishTime}}</text>
+              </view>
+            </view>
+            <view class="collect"><image src = "{{src}}" class="collect-img" bindtap = "bindsha" data-id = "{{Object.ProjectID}}"></image></view>
+          </view>
+        </view>
+
+        <!--资产包-->
+        <view wx:if="{{Object.TypeID=='1'}}" class="f16">
+          <view class="bg-white p20 padding-b">
+            <view class="issue-status padt">
+              <text class="gray-dark">发布方身份：</text>{{Object.Identity}}</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">资产包类型：</text>{{Object.AssetType}}</view>
+            <view class="issue-resource padt">
+              <text class="gray-dark">来源：</text>{{Object.FromWhere}}</view>
+            <view class="issue-area padt">
+              <text class="gray-dark">地区：</text>{{Object.ProArea}}</view>
+            <view class="issue-total padt">
+              <text class="gray-dark">总金额：</text>{{Object.TotalMoney}}万元</view>
+            <view class="issue-transfer padt">
+              <text class="gray-dark">转让价：</text>{{Object.TransferMoney}}万元</view>
+          </view>
+          <view class="others p20">
+            <text class="others-title sub-title">其他信息</text>
+            <view class="row">
+              <view class="issue-capital padt">本金：{{Object.Money}}万元</view>
+              <view class="issue-notice padt">有无尽调报告：{{Object.Report}}</view>
+            </view>
+            <view class="row">
+              <view class="issue-interest padt">利息：{{Object.Rate}}万元</view>
+              <view class="issue-time padt">出表时间：{{Object.Time}}</view>
+            </view>
+            <view class="row">
+              <view class="issue-door padt">户数：{{Object.Counts}}户</view>
+              <view class="issue-mort padt">抵押物类型：{{Object.Pawn}}</view>
+            </view>
+          </view>
+          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+            <text class="spot sub-title">项目亮点</text>
+            <text class="orange">{{Object.ProLabel}}</text>
+          </view>
+        </view>
+
+        <!--融资信息-股权-->
+        <view wx:if="{{Object.TypeID=='6'}}" class="f16">
+          <view class="bg-white p20 padding-b">
+            <view class="issue-status padt">
+              <text class="gray-dark">发布方身份：</text>{{Object.Identity}}</view>
+            <view class="issue-area padt">
+              <text class="gray-dark">项目所在地：</text>{{Object.ProArea}}</view>
+            <view class="issue-resource padt">
+              <text class="gray-dark">融资方式：</text>{{Object.AssetType}}</view>
+            <view class="issue-total padt">
+              <text class="gray-dark">融资金额：</text>{{Object.TotalMoney}}万元</view>
+            <view class="issue-resource padt">
+              <text class="gray-dark">出让股权比例：</text>{{Object.Rate}}%</view>
+            <view class="issue-resource padt">
+              <text class="gray-dark">企业现状：</text>{{Object.Status}}</view>
+            <view class="issue-resource padt">
+              <text class="gray-dark">所属行业：</text>{{Object.Belong}}</view>
+            <view class="issue-resource padt">
+              <text class="gray-dark">资金用途：</text>{{Object.Usefor}}</view>
+          </view>
+          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt">
+            <text class="spot sub-title">项目亮点</text>
+            <text class="orange">{{Object.ProLabel}}</text>
+          </view>
+        </view>
+
+        <!--固定资产-房产-->
+        <view wx:if="{{Object.TypeID=='12'}}" class="f16">
+          <view class="bg-white p20 padding-b">
+            <view class="issue-status padt">
+              <text class="gray-dark">发布方身份：</text>{{Object.Identity}}</view>
+            <view class="issue-area padt">
+              <text class="gray-dark">地区：</text>{{Object.ProArea}}</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">标的物类型：</text>{{Object.AssetType}}</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">房产类型：</text>{{Object.Type}}</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">面积：</text>{{Object.Area}}平方米</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">剩余使用年限：</text>{{Object.Year}}年</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">转让方式：</text>{{Object.TransferType}}</view>
+            <view class="issue-total padt">
+              <text class="gray-dark">市场价：</text>{{Object.MarketPrice}}万元</view>
+            <view class="issue-transfer padt">
+              <text class="gray-dark">转让价：</text>{{Object.TransferMoney}}万元</view>
+          </view>
+          <view class="others p20">
+            <text class="others-title sub-title">其他信息</text>
+            <view class="row">
+              <view class="issue-capital padt">有无相关证件：{{Object.Credentials}}</view>
+              <view class="issue-notice padt">有无法律纠纷：{{Object.Dispute}}</view>
+            </view>
+            <view class="row">
+              <view class="issue-door padt">有无负债：{{Object.Debt}}</view>
+              <view class="issue-mort padt">有无抵押担保：{{Object.Guaranty}}</view>
+            </view>
+            <view class="row">
+              <view class="padt">是否拥有全部产权：{{Object.PropertyPawn}}</view>
+            </view>
+          </view>
+          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+            <text class="spot sub-title">项目亮点</text>
+            <text class="orange">{{Object.ProLabel}}</text>
+          </view>
+        </view>
+
+        <!--固定资产-土地-->
+        <view wx:if="{{Object.TypeID=='16'}}" class="f16">
+          <view class="bg-white p20 padding-b">
+            <view class="issue-status padt">
+              <text class="gray-dark">发布方身份：</text>{{Object.Identity}}</view>
+            <view class="issue-area padt">
+              <text class="gray-dark">地区：</text>{{Object.ProArea}}</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">标的物类型：</text>{{Object.AssetType}}</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">规划用途：</text>{{Object.Usefor}}</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">面积：</text>{{Object.Area}}平方米</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">剩余使用年限：</text>{{Object.Year}}年</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">转让方式：</text>{{Object.TransferType}}</view>
+            <view class="issue-transfer padt">
+              <text class="gray-dark">转让价：</text>{{Object.TransferMoney}}万元</view>
+          </view>
+          <view class="others p20">
+            <text class="others-title sub-title">其他信息</text>
+            <view class="row">
+              <view class="issue-capital padt">有无相关证件：{{Object.Credentials}}</view>
+              <view class="issue-notice padt">有无法律纠纷：{{Object.Dispute}}</view>
+            </view>
+            <view class="row">
+              <view class="issue-door padt">有无负债：{{Object.Debt}}</view>
+              <view class="issue-mort padt">有无抵押担保：{{Object.Guaranty}}</view>
+              <view class="row">
+                <view class="padt">是否拥有全部产权：{{Object.PropertyPawn}}</view>
+              </view>
+            </view>
+            <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+              <text class="spot sub-title">项目亮点</text>
+              <text class="orange">{{Object.ProLabel}}</text>
+            </view>
+          </view>
+        </view>
+
+        <!--融资信息-债权-->
+        <view wx:if="{{Object.TypeID=='17'}}" class="f16">
+          <view class="bg-white p20 padding-b">
+            <view class="issue-status padt">
+              <text class="gray-dark">发布方身份：</text>{{Object.Identity}}</view>
+            <view class="issue-area padt">
+              <text class="gray-dark">项目所在地：</text>{{Object.ProArea}}</view>
+            <view class="issue-resource padt">
+              <text class="gray-dark">融资方式：</text>{{Object.AssetType}}</view>
+            <view class="issue-resource padt">
+              <text class="gray-dark">担保方式：</text>{{Object.Type}}</view>
+            <view class="issue-total padt">
+              <text class="gray-dark">融资金额：</text>{{Object.Money}}万元</view>
+            <view class="issue-resource padt">
+              <text class="gray-dark">使用期限：</text>{{Object.Month}}个月</view>
+          </view>
+          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+            <text class="spot sub-title">项目亮点</text>
+            <text class="orange">{{Object.ProLabel}}</text>
+          </view>
+        </view>
+
+        <!--企业商帐-->
+        <view wx:if="{{Object.TypeID=='18'}}" class="f16">
+          <view class="bg-white p20 padding-b">
+            <view class="issue-status padt">
+              <text class="gray-dark">发布方身份：</text>{{Object.Identity}}</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">商账类型：</text>{{Object.AssetType}}</view>
+            <view class="issue-total padt">
+              <text class="gray-dark">债权金额：</text>{{Object.Money}}万元</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">逾期时间：</text>{{Object.Month}}个月</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">诉讼佣金比例：</text>{{Object.Law}}</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">非诉讼佣金比例：</text>{{Object.UnLaw}}</view>
+            <view class="issue-area padt">
+              <text class="gray-dark">债务方地区：</text>{{Object.ProArea}}</view>
+            <view class="issue-area padt">
+              <text class="gray-dark">债务方企业性质：</text>{{Object.Nature}}</view>
+            <view class="issue-area padt">
+              <text class="gray-dark">债务方经营情况：</text>{{Object.Status}}</view>
+          </view>
+          <view class="others p20">
+            <text class="others-title sub-title">其他信息</text>
+            <view class="row">
+              <view class="issue-capital padt">有无债权相关凭证：{{Object.Guaranty}}</view>
+              <view class="issue-notice padt">债权涉诉情况：{{Object.State}}</view>
+            </view>
+            <view class="row">
+              <view class="padt">债务方行业：{{Object.Industry}}</view>
+            </view>
+          </view>
+          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+            <text class="spot sub-title">项目亮点</text>
+            <text class="orange">{{Object.ProLabel}}</text>
+          </view>
+        </view>
+
+        <!--个人债权-->
+        <view wx:if="{{Object.TypeID=='19'}}" class="f16">
+          <view class="bg-white p20 padding-b">
+            <view class="issue-status padt">
+              <text class="gray-dark">发布方身份：</text>{{Object.Identity}}</view>
+            <view class="issue-total padt">
+              <text class="gray-dark">总金额：</text>{{Object.TotalMoney}}万元</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">逾期时间：</text>{{Object.Money}}个月</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">诉讼佣金比例：</text>{{Object.Law}}</view>
+            <view class="issue-type padt">
+              <text class="gray-dark">非诉讼佣金比例：</text>{{Object.UnLaw}}</view>
+            <view class="issue-area padt">
+              <text class="gray-dark">债权人所在地：</text>{{Object.DebteeLocation}}</view>
+            <view class="issue-area padt">
+              <text class="gray-dark">债务人所在地：</text>{{Object.ProArea}}</view>
+          </view>
+          <view class="others p20">
+            <text class="others-title sub-title">其他信息</text>
+            <view class="row">
+              <view class="issue-capital padt">是否有担保：{{Object.Guaranty}}</view>
+              <view class="issue-notice padt">是否有抵押：{{Object.Property}}</view>
+            </view>
+            <view class="row">
+              <view class="issue-capital padt">债务人是否失联：{{Object.Connect}}</view>
+              <view class="issue-notice padt">债务人是否有偿还能力：{{Object.Pay}}</view>
+            </view>
+            <view class="row">
+              <view class="padt">相关凭证是否齐全{{Object.Credentials}}</view>
+            </view>
+          </view>
+          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+            <text class="spot sub-title">项目亮点</text>
+            <text class="orange">{{Object.ProLabel}}</text>
+          </view>
+        </view>
+
+        <!--法拍资产-房产-->
+        <view wx:if="{{Object.TypeID=='20'}}" class="f16 p20 bg-white padding-b">
+          <view class="issue-type padt">
+            <text class="gray-dark">资产类型：</text>{{Object.AssetType}}</view>
+          <view class="issue-type padt">
+            <text class="gray-dark">面积：</text>{{Object.Area}}平方米</view>
+          <view class="issue-type padt">
+            <text class="gray-dark">性质：</text>{{Object.Nature}}</view>
+          <view class="issue-total padt">
+            <text class="gray-dark">起拍价：</text>{{Object.Money}}万元</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">拍卖地点：</text>{{Object.ProArea}}</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">拍卖时间：</text>{{Object.Year}}</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">拍卖阶段：</text>{{Object.State}}</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">处置单位：</text>{{Object.Court}}</view>
+        </view>
+
+        <!--法拍资产-土地-->
+        <view wx:if="{{Object.TypeID=='21'}}" class="f16 p20 bg-white padding-b">
+          <view class="issue-type padt">
+            <text class="gray-dark">资产类型：</text>{{Object.AssetType}}</view>
+          <view class="issue-type padt">
+            <text class="gray-dark">面积：</text>{{Object.Area}}平方米</view>
+          <view class="issue-type padt">
+            <text class="gray-dark">性质：</text>{{Object.Nature}}</view>
+          <view class="issue-total padt">
+            <text class="gray-dark">起拍价：</text>{{Object.Money}}万元</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">拍卖地点：</text>{{Object.ProArea}}</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">拍卖时间：</text>{{Object.Year}}</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">拍卖阶段：</text>{{Object.State}}</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">处置单位：</text>{{Object.Court}}</view>
+        </view>
+
+        <!--法拍资产-汽车-->
+        <view wx:if="{{Object.TypeID=='22'}}" class="f16 p20 bg-white padding-b">
+          <view class="issue-type padt">
+            <text class="gray-dark">资产类型：</text>{{Object.AssetType}}</view>
+          <view class="issue-type padt">
+            <text class="gray-dark">品牌型号：</text>{{Object.Brand}}</view>
+          <view class="issue-total padt">
+            <text class="gray-dark">起拍价：</text>{{Object.Money}}万元</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">拍卖地点：</text>{{Object.ProArea}}</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">拍卖时间：</text>{{Object.Year}}</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">拍卖阶段：</text>{{Object.State}}</view>
+          <view class="issue-area padt">
+            <text class="gray-dark">处置单位：</text>{{Object.Court}}</view>
+        </view>
+        <view class="desc f16 p20">
+          <text class="desc-title sub-title">文字描述</text>
+          <view class="desc-con">{{Object.WordDes}}</view>
+        </view>
+        <view class="photos f16 p20">
+          <text class="photo-title sub-title">相关凭证</text>
+          <image src="http://images.ziyawang.com{{Object.PictureDes1}}" class="photo-cert"></image>
+          <image src="http://images.ziyawang.com{{Object.PictureDes2}}" class="photo-cert"></image>
+          <image src="http://images.ziyawang.com{{Object.PictureDes3}}" class="photo-cert"></image>
+        </view>
+        <view wx:if="{{Object.Promise=='承诺'}}" class="promise">重要提示
+          <text class="promise-con">发布方本人已经对本条信息的真实性进行承诺</text>
+        </view>
+        <view class="bg-white chat">
+          <view class="phonenumber">约谈电话:{{Object.ConnectPhone}}</view>
+          <view>约谈人:{{Object.ConnectPerson}}</view>
+        </view>
+        <view class="bottom-btn"><button class="chat-btn" bindtap="call" data-phone= "{{Object.ConnectPhone}}">约谈</button></view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

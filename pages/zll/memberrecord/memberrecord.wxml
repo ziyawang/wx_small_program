@@ -1,0 +1,10 @@
+<view>
+  <view wx:for="{{lists}}" class="item">
+    <view class="open-desc">
+      <view class="open-types">{{item.Operates}}</view>
+      <text class="open-times">开通时间：{{item.StartTime}}</text>
+      <text class="open-times">到期时间：{{item.EndTime}}</text>
+    </view>
+    <text class="open-money">+{{item.PayMoney/100}}￥</text>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+/**app.wxss**/
+.container {
+    font-family: 'Microsoft Yahei',Helvetica Neue, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+page {
+  background: #fff;
+  font-size: 28rpx;
+}
