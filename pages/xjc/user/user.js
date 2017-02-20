@@ -102,6 +102,7 @@ Page({
       })
     }
   },
+  //服务方认证
   confirmClick: function () {
     var that = this
     if (that.data.token == null) {

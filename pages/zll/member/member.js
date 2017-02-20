@@ -22,24 +22,44 @@ Page({
       method: 'POST',
       dataType: 'json',
       success: function (res) {
-        var showRightPic = [];
-        for (var i = 0; i < res.data.user.showrightios.length; i++) {
-          showRightPic.push("../../../image/right_" + res.data.user.showrightios[i] + ".png")
+        if (res.data.role == 1) {
+          var showRightPic = [];
+          for (var i = 0; i < res.data.user.showrightios.length; i++) {
+            showRightPic.push("../../../image/right_" + res.data.user.showrightios[i] + ".png")
+          }
+          _that.setData({
+            userInfo: res.data,
+            showRightPic: showRightPic,
+            showRightTime: res.data.user.showrightarr
+          })
+          app.globalData.userInfo = res.data
+        } else {
+           _that.setData({
+            userInfo: res.data,
+          })
         }
-        _that.setData({
-          userInfo: res.data,
-          showRightPic: showRightPic,
-          showRightTime: res.data.user.showrightarr
-        })
-        app.globalData.userInfo = res.data
       }
     })
   },
-  showTime: function(obj){
+  showTime: function (obj) {
     console.log(obj)
     var index = obj.target.dataset.index
     wx.showModal({
-      content:this.data.showRightTime[index][0] + "会员到期时间：" + this.data.showRightTime[index][1]
+      content: this.data.showRightTime[index][0] + "会员到期时间：" + this.data.showRightTime[index][1]
     })
+  },
+  //去认证
+  confirmClick: function () {
+    var that = this
+      var roles = wx.getStorageSync("role");
+      if (roles == 0) {
+        wx.navigateTo({
+          url: '../../lds/confirm/confirm'
+        })
+      } else {
+        wx.navigateTo({
+          url: '../../lds/reConfirm/reConfirm'
+        })
+      }
   }
 })

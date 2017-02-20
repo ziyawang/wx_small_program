@@ -20,7 +20,6 @@
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     display: flex;
-    margin-bottom: 20rpx;
     background: #fff;
 }
 .current{
@@ -28,6 +27,7 @@
 }
 .member-icon-set{
     margin-top: -4rpx;
+    float: left;
 }
 .member-icon{
     width: 55rpx; 
@@ -64,4 +64,20 @@
     width: 55rpx ;
     height : 46rpx ;
     margin: 0 auto 20rpx;
+}
+.goto-cert{
+    float: right;
+    width: 6em;
+    font-size: 24rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    background: deepskyblue;
+    color: #fff;
+}
+.oh{
+    overflow: hidden;
+}
+.member-top-tips{
+    float: left;
+    line-height: 44rpx;
 }
