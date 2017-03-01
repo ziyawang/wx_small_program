@@ -163,3 +163,11 @@
   height: 100%;
   line-height: 80rpx;
 }
+.disposal-state{
+  position: absolute;
+  right: 30rpx;
+  top: 300rpx;
+  width: 163rpx;
+  height: 130rpx;
+  z-index: 99 ;
+}

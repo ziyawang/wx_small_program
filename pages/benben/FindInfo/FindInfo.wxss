@@ -9,13 +9,24 @@
   padding: 20rpx 10rpx;
   background: #fff;
 }
-
-.container .brand_item .pic {
+.brand_item .pic {
+  position: relative;
+}
+.pic-img,.brand_item .pic {
   display: block;
   width: 220rpx;
   height: 160rpx;
 }
 
+.state-img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 83rpx;
+  height: 85rpx;
+  z-index: 2;
+}
 .right_cont {
   width: calc(100% - 220rpx);
   padding-top: 0;

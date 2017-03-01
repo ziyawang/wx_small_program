@@ -5,8 +5,12 @@
       <view>
         <view class="chuzhi">{{Object.NewsTitle}}</view>
         <view class="gray p20 f12">来源：{{Object.NewsAuthor}}</view>
-        <view class="p20 f12 chuzhi-time"><view class="gray bdb padding-b">时间：{{Object.PublishTime}}</view></view>
-        <view class="p20 lh2"><template is="wxParse" data="{{wxParseData:article.nodes}}" /></view>
+        <view class="p20 f12 chuzhi-time">
+          <view class="gray bdb padding-b">时间：{{Object.PublishTime}}</view>
+        </view>
+        <view class="p20 lh2">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>
       </view>
     </view>
     <view wx:else>
@@ -23,13 +27,17 @@
                 <text class="number f12">FB{{Object.ProjectID}}</text>
               </view>
               <view class="f12 gray">
-                <text class="visit-count">浏览：{{Object.ViewCount}}次     </text>
+                <text class="visit-count">浏览：{{Object.ViewCount}}次 </text>
                 <text class="publish-time">{{Object.PublishTime}}</text>
               </view>
             </view>
-            <view class="collect"><image src = "{{src}}" class="collect-img" bindtap = "bindsha" data-id = "{{Object.ProjectID}}"></image></view>
+            <view class="collect">
+              <image src="{{src}}" class="collect-img" bindtap="bindsha" data-id="{{Object.ProjectID}}"></image>
+            </view>
           </view>
         </view>
+
+        <image src="{{src_103}}" class="disposal-state"></image>
 
         <!--资产包-->
         <view wx:if="{{Object.TypeID=='1'}}" class="f16">
@@ -62,7 +70,7 @@
               <view class="issue-mort padt">抵押物类型：{{Object.Pawn}}</view>
             </view>
           </view>
-          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+          <view wx:if="{{Object.ProLabel != '' }}" class="issue-spot padt p20">
             <text class="spot sub-title">项目亮点</text>
             <text class="orange">{{Object.ProLabel}}</text>
           </view>
@@ -88,7 +96,7 @@
             <view class="issue-resource padt">
               <text class="gray-dark">资金用途：</text>{{Object.Usefor}}</view>
           </view>
-          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt">
+          <view wx:if="{{Object.ProLabel != '' }}" class="issue-spot padt">
             <text class="spot sub-title">项目亮点</text>
             <text class="orange">{{Object.ProLabel}}</text>
           </view>
@@ -130,7 +138,7 @@
               <view class="padt">是否拥有全部产权：{{Object.PropertyPawn}}</view>
             </view>
           </view>
-          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+          <view wx:if="{{Object.ProLabel != '' }}" class="issue-spot padt p20">
             <text class="spot sub-title">项目亮点</text>
             <text class="orange">{{Object.ProLabel}}</text>
           </view>
@@ -169,7 +177,7 @@
                 <view class="padt">是否拥有全部产权：{{Object.PropertyPawn}}</view>
               </view>
             </view>
-            <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+            <view wx:if="{{Object.ProLabel != '' }}" class="issue-spot padt p20">
               <text class="spot sub-title">项目亮点</text>
               <text class="orange">{{Object.ProLabel}}</text>
             </view>
@@ -192,7 +200,7 @@
             <view class="issue-resource padt">
               <text class="gray-dark">使用期限：</text>{{Object.Month}}个月</view>
           </view>
-          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+          <view wx:if="{{Object.ProLabel != '' }}" class="issue-spot padt p20">
             <text class="spot sub-title">项目亮点</text>
             <text class="orange">{{Object.ProLabel}}</text>
           </view>
@@ -230,7 +238,7 @@
               <view class="padt">债务方行业：{{Object.Industry}}</view>
             </view>
           </view>
-          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+          <view wx:if="{{Object.ProLabel != '' }}" class="issue-spot padt p20">
             <text class="spot sub-title">项目亮点</text>
             <text class="orange">{{Object.ProLabel}}</text>
           </view>
@@ -268,7 +276,7 @@
               <view class="padt">相关凭证是否齐全{{Object.Credentials}}</view>
             </view>
           </view>
-          <view wx:if = "{{Object.ProLabel != '' }}" class="issue-spot padt p20">
+          <view wx:if="{{Object.ProLabel != '' }}" class="issue-spot padt p20">
             <text class="spot sub-title">项目亮点</text>
             <text class="orange">{{Object.ProLabel}}</text>
           </view>
@@ -348,7 +356,11 @@
           <view class="phonenumber">约谈电话:{{Object.ConnectPhone}}</view>
           <view>约谈人:{{Object.ConnectPerson}}</view>
         </view>
-        <view class="bottom-btn"><button class="chat-btn" bindtap="call" data-phone= "{{Object.ConnectPhone}}">约谈</button></view>
+        <view wx:if="{{Object.CooperateState=='0'}}">
+          <view class="bottom-btn">
+            <button class="chat-btn" bindtap="call" data-phone="{{Object.ConnectPhone}}">约谈</button>
+          </view>
+        </view>
       </view>
     </view>
   </scroll-view>

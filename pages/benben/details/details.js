@@ -14,7 +14,7 @@ Page({
     })
     var datas = {
       access_token: "token",
-      token: wx.getStorageSync('token') ,
+      token: wx.getStorageSync('token'),
     }
     console.log(options.type)
     that.setData({
@@ -51,9 +51,25 @@ Page({
             } else {
               var src = "../../../image/v2shoucang.png"
             }
+            if (res.data.CooperateState == "1") {
+              var src_103 = "../../../image/v103_coo.png"
+            } else if (res.data.CooperateState == "2") {
+              if (res.data.TypeID == "6" || res.data.TypeID == "17") {
+                var src_103 = "../../../image/v103_coer_617.png"
+              } else {
+                var src_103 = "../../../image/v103_over.png"
+              }
+            } else if (res.data.Member == "1") {
+              var src_103 = "../../../image/v103_vip.png"
+            } else if (res.data.Member == "2") {
+              var src_103 = "../../../image/v103_money.png"
+            } else {
+              var src_103 = "../../../image/v103_free.png"
+            }
             that.setData({
               Object: res.data,
-              src: src
+              src: src ,
+              src_103 : src_103
             });
             break
         }
@@ -74,10 +90,10 @@ Page({
     //console.log(e.currentTarget.dataset.id)
     var that = this
     wx.request({
-      url: 'https://apis.ziyawang.com/zll/collect' + '?token=' + wx.getStorageSync('token') ,
+      url: 'https://apis.ziyawang.com/zll/collect' + '?token=' + wx.getStorageSync('token'),
       data: {
         access_token: "token",
-        itemID: e.currentTarget.dataset.id ,
+        itemID: e.currentTarget.dataset.id,
         type: "1"
       },
       method: 'POST',
@@ -101,11 +117,11 @@ Page({
     })
   },
   //分享
-    onShareAppMessage: function () {
-        return {
-            title: '资芽',
-            desc: '全球不良资产超级综服平台',
-            path: '/pages/benben/FindInfo/FindInfo'
-        }
-    },
+  onShareAppMessage: function () {
+    return {
+      title: '资芽',
+      desc: '全球不良资产超级综服平台',
+      path: '/pages/benben/FindInfo/FindInfo'
+    }
+  },
 })
